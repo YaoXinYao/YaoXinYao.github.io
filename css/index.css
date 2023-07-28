@@ -4002,14 +4002,13 @@ h1.page-title + .tag-cloud-list {
   align-items: center;
 }
 #nav .menus_items .menus_item:hover .menus_item_child {
+  position: absolute;
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: box;
   display: flex;
-  width: auto;
-  padding: 5px;
 }
 #nav .menus_items .menus_item:hover > a > i:last-child {
   -webkit-transform: rotate(180deg);
@@ -4034,7 +4033,7 @@ h1.page-title + .tag-cloud-list {
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  margin-top: 8px;
+  margin-top: 48px;
   padding: 0;
   width: max-content;
   background-color: var(--sidebar-bg);
@@ -4057,6 +4056,7 @@ h1.page-title + .tag-cloud-list {
 }
 #nav .menus_items .menus_item .menus_item_child li {
   list-style: none;
+  padding: 5px;
 }
 #nav .menus_items .menus_item .menus_item_child li:hover {
   background: var(--text-bg-hover);
@@ -4081,7 +4081,7 @@ h1.page-title + .tag-cloud-list {
   font-size: inherit;
 }
 #nav.hide-menu .menus_items {
-  display: none;
+  display: none !important;
 }
 #nav.hide-menu #search-button span {
   display: none;
@@ -6640,6 +6640,12 @@ center#name-container {
 /* #nav *::after{
     background-color: transparent!important;
 } */
+
+/* @media screen and (max-width: 870px) {
+  .menus_items {
+    display: none !important;
+  } */
+/* } */
 
 /* 一级菜单居中 */
 #nav .menus_items {
