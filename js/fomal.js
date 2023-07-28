@@ -519,7 +519,7 @@ if (document.body.clientWidth > 992) {
         borderRadius: 5 + "px",
         right: 60 + "px",
         // 这里可以换为你喜欢的图片，例如我就换为了雪人，但是要抠图
-        nekoImg: "/assets/star.png",
+        nekoImg: "/assets/flower.webp",
         hoverMsg: "喵喵喵~",
         color: "#6f42c1",
         during: 500,
@@ -3443,8 +3443,8 @@ if (localStorage.getItem("blogbg") != undefined) {
   setBg(localStorage.getItem("blogbg"));
 } else {
   document.getElementById("defineBg").innerText = `:root{
-    --default-bg: url(/assets/images/indexImg1.jpg);
-    --darkmode-bg:url(/assets/images/indexImg2.png);
+    --default-bg: url(/assets/images/indexImg2.png);
+    --darkmode-bg:url(/assets/images/indexImg1.jpg);
     --mobileday-bg: url(https://wangjinglun.oss-cn-beijing.aliyuncs.com/images/Darling/172.jpg);
     --mobilenight-bg: url(https://wangjinglun.oss-cn-beijing.aliyuncs.com/images/Darling/62.jpg);
   }`;

@@ -2902,12 +2902,24 @@ h1.page-title + .tag-cloud-list {
   margin-top: 20px;
   padding: 20px 24px;
 }
+#aside-content .card-info {
+  position: relative;
+}
 #aside-content .card-info .author-info__name {
   font-weight: 500;
   font-size: 1.57em;
 }
 #aside-content .card-info .author-info__description {
   margin-top: -0.42em;
+}
+#aside-content .card-info .covers {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  filter: blur(5px);
+  z-index: 0;
 }
 #aside-content .card-info .card-info-data {
   margin: 14px 0 4px;
@@ -6693,6 +6705,14 @@ center#name-container {
   padding: 20px;
 }
 
+[data-theme="light"] .covers {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+[data-theme="dark"] .covers {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
 /* 文章页、归档页、普通页面 */
 div#post,
 div#page,
@@ -7006,7 +7026,7 @@ div#archive {
   background: linear-gradient(
     to top,
     #a2fee1,
-    #a196ff 
+    #a196ff
   ); /*默认模式博主气泡配色*/
   color: #fff; /*默认模式博主气泡字体配色*/
   width: fit-content;
@@ -7316,7 +7336,14 @@ h6::before {
 
 /* 给需要的页面加侧边栏 --- 追番、影院、游戏、旧时光 */
 @media screen and (min-width: 900px) {
-  .page:not(.page.home,.page.wjl_archive,.page:has(.layout>#page>#article-container>.bangumi-tabs),.page:has(.layout>#page>#article-container>.timeline),.page:has(.layout>#page>#article-container>.hexo-douban-tabs)) .aside-content {
+  .page:not(
+      .page.home,
+      .page.wjl_archive,
+      .page:has(.layout > #page > #article-container > .bangumi-tabs),
+      .page:has(.layout > #page > #article-container > .timeline),
+      .page:has(.layout > #page > #article-container > .hexo-douban-tabs)
+    )
+    .aside-content {
     display: none;
   }
 }
@@ -7391,10 +7418,9 @@ h6::before {
   }
 }
 
-.wjl_collect .collect_right{
+.wjl_collect .collect_right {
   margin-top: 9px;
 }
-
 
 /* 标题增强 */
 #site-name::before {
@@ -7619,18 +7645,18 @@ button#go-up:hover #percent {
   height: 103px;
 }
 
-.box{
+.box {
   height: 108px;
   width: 192px;
 }
 
 @media screen and (max-width: 768px) {
   /* 背景 */
-  .pimgbox{
+  .pimgbox {
     height: 175px;
     width: 100px;
   }
-  .imgbox{
+  .imgbox {
     height: 63px;
     width: 112px;
   }
@@ -7706,7 +7732,7 @@ button#go-up:hover #percent {
 
 /* 个人信息卡片背景图 */
 [data-theme="light"] #aside-content > .card-widget.card-info {
-  background-image: url(https://tuchuang.voooe.cn/images/2023/02/28/springBg.png);
+  background-image: url(/assets/images/美少女.webp);
   background-repeat: no-repeat;
   background-attachment: inherit;
   background-size: 100%;
@@ -7778,8 +7804,7 @@ input#pic-link {
 
 /* heo 加载动画头像 */
 .loading-img {
-  background: url(https://cdn.staticaly.com/gh/1405720461/images@master/img/188.jpg)
-    no-repeat center center;
+  background: url(/assets/02.jpg) no-repeat center center;
   background-size: cover;
 }
 
@@ -8327,7 +8352,6 @@ li.categoryBar-list-item {
   }
 }
 
-
 /* 自定义颜色框 */
 #define_colors::before {
   position: absolute;
@@ -8616,20 +8640,20 @@ li.categoryBar-list-item {
 } */
 
 .neko {
-    width: 64px;
-    height: 64px;
-    background-image: url("/assets/star.png");
-    position: absolute;
-    right: 32px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    transform: translateX(50%);
-    cursor: pointer;
-    font-family: tzy;
-    font-weight: 600;
-    font-size: 16px;
-    color: #6f42c1;
-    display: none;
+  width: 100px;
+  height: 100px;
+  background-image: url("/assets/flower.webp");
+  position: absolute;
+  right: 32px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translateX(50%);
+  cursor: pointer;
+  font-family: tzy;
+  font-weight: 600;
+  font-size: 16px;
+  color: #6f42c1;
+  display: none;
 }
 
 /* .neko::after {
@@ -9523,7 +9547,6 @@ hr:before {
   content: "Unsplash随机壁纸";
 }
 
-
 @media screen and (max-width: 768px) {
   .apiBox::before {
     top: 30px;
@@ -9535,32 +9558,32 @@ hr:before {
   }
   #bingHistoryBox::before {
     left: 30px;
-   content: "必应历史壁纸";
+    content: "必应历史壁纸";
   }
-#EEEDogBox::before {
-  left: 17px;
-  content: "EEEDog动漫壁纸";
-}
-#seovxBox::before {
-  left: 30px;
-  content: "seovx美女壁纸";
-}
-#picsumBox::before {
-  left: 22px;
-  content: "picsum随机壁纸";
-}
-#waiBizhiBox::before {
-  left: 34px;
-  content: "小歪高清壁纸";
-}
-#btstuBox::before {
-  left: 34px;
-  content: "博天随机壁纸";
-}
-#unsplashBox::before {
-  left: 14px;
-  content: "Unsplash随机壁纸";
-}
+  #EEEDogBox::before {
+    left: 17px;
+    content: "EEEDog动漫壁纸";
+  }
+  #seovxBox::before {
+    left: 30px;
+    content: "seovx美女壁纸";
+  }
+  #picsumBox::before {
+    left: 22px;
+    content: "picsum随机壁纸";
+  }
+  #waiBizhiBox::before {
+    left: 34px;
+    content: "小歪高清壁纸";
+  }
+  #btstuBox::before {
+    left: 34px;
+    content: "博天随机壁纸";
+  }
+  #unsplashBox::before {
+    left: 14px;
+    content: "Unsplash随机壁纸";
+  }
 }
 /* 评论区圆角 */
 .tk-meta-input .el-input .el-input-group__prepend {
@@ -9590,9 +9613,8 @@ hr:before {
 
 /* 相册实线 */
 #article-container figure.gallery-group .gallery-group-name:after {
-  left: -1px
+  left: -1px;
 }
-
 
 /* 恋爱下面按钮样式 */
 .hbe-button {
@@ -9604,19 +9626,19 @@ hr:before {
 @media screen and (min-width: 900px) {
   /* ------  八音盒页面音乐播放器  ------ */
   /* 左边大图 */
-  .aplayer.aplayer-withlrc .aplayer-pic{
+  .aplayer.aplayer-withlrc .aplayer-pic {
     width: 150px !important;
     height: 150px !important;
   }
 
   /* 暂停按钮 */
-  .aplayer.aplayer-withlrc .aplayer-pic .aplayer-play{
+  .aplayer.aplayer-withlrc .aplayer-pic .aplayer-play {
     width: 50px !important;
     height: 50px !important;
     margin: 0 -25px -25px 0 !important;
   }
 
-  .aplayer.aplayer-withlrc .aplayer-pic .aplayer-play svg{
+  .aplayer.aplayer-withlrc .aplayer-pic .aplayer-play svg {
     top: 7px !important;
     left: 15px !important;
     height: 35px !important;
@@ -9629,7 +9651,7 @@ hr:before {
     height: 30px !important;
   }
 
-  .aplayer.aplayer-withlrc .aplayer-pic .aplayer-pause svg{
+  .aplayer.aplayer-withlrc .aplayer-pic .aplayer-pause svg {
     top: 3px !important;
     left: 2px !important;
     height: 24px !important;
@@ -9675,15 +9697,29 @@ hr:before {
   }
 
   /* 进度条 */
-  .aplayer.aplayer-withlrc .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar{
+  .aplayer.aplayer-withlrc
+    .aplayer-info
+    .aplayer-controller
+    .aplayer-bar-wrap
+    .aplayer-bar {
     height: 3px !important;
   }
 
-  .aplayer.aplayer-withlrc .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded{
+  .aplayer.aplayer-withlrc
+    .aplayer-info
+    .aplayer-controller
+    .aplayer-bar-wrap
+    .aplayer-bar
+    .aplayer-loaded {
     height: 3px !important;
   }
 
-  .aplayer.aplayer-withlrc .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played{
+  .aplayer.aplayer-withlrc
+    .aplayer-info
+    .aplayer-controller
+    .aplayer-bar-wrap
+    .aplayer-bar
+    .aplayer-played {
     height: 3px !important;
   }
 
@@ -9710,35 +9746,39 @@ hr:before {
 }
 
 /* 八音盒夜间模式 */
-[data-theme="dark"]  #article-container{
+[data-theme="dark"] #article-container {
   /* color:seashell; */
   background: var(--trans-dark);
 }
 
-[data-theme="dark"] .aplayer{
-  color:#6baaa1;
+[data-theme="dark"] .aplayer {
+  color: #6baaa1;
   background: var(--trans-dark);
 }
 
-[data-theme="dark"] .aplayer .aplayer-list ol li .aplayer-list-author{
-  color:#d096b6;
+[data-theme="dark"] .aplayer .aplayer-list ol li .aplayer-list-author {
+  color: #d096b6;
 }
 
-[data-theme="dark"] .aplayer-list-light .aplayer-list-title{
+[data-theme="dark"] .aplayer-list-light .aplayer-list-title {
   text-shadow: 2px 2px 3px #89d1c5;
 }
 
-[data-theme="dark"] .aplayer-list-light .aplayer-list-author{
+[data-theme="dark"] .aplayer-list-light .aplayer-list-author {
   text-shadow: 2px 2px 3px #ebb1d6;
 }
 
 [data-theme="dark"] .aplayer .aplayer-lrc:before {
-  background: linear-gradient(180deg,rgba(25,25,25) 0,hsla(0,0%,100%,0));
+  background: linear-gradient(180deg, rgba(25, 25, 25) 0, hsla(0, 0%, 100%, 0));
 }
 
 [data-theme="dark"] .aplayer .aplayer-lrc:after {
   height: 20%;
-  background: linear-gradient(180deg,hsla(0, 3%, 8%, 0) 0,hsla(0, 3%, 8%, 0.8))
+  background: linear-gradient(
+    180deg,
+    hsla(0, 3%, 8%, 0) 0,
+    hsla(0, 3%, 8%, 0.8)
+  );
 }
 /* ----- 底部音乐播放器 ----- */
 .aplayer.aplayer-fixed {
@@ -9753,7 +9793,7 @@ hr:before {
   bottom: 60px !important;
 }
 
-.aplayer.aplayer-fixed .aplayer-list{
+.aplayer.aplayer-fixed .aplayer-list {
   max-height: 252px !important;
   margin-bottom: 66px !important;
 }
@@ -9764,34 +9804,33 @@ hr:before {
 
 /* --------------------------- */
 
-
 /*更改背景功能手机适应 */
 @media screen and (max-width: 600px) {
-  .btn_bg1{
+  .btn_bg1 {
     width: 50% !important;
     padding: 15px 10px !important;
   }
 
-  .btn_bg2{
+  .btn_bg2 {
     width: 44% !important;
     padding: 15px 5px !important;
   }
 
   /* 切换背景按钮 */
-  .custom_bg{
+  .custom_bg {
     width: 50% !important;
   }
 
   /* 手机适配恋爱小屋页面 */
-  .hbe-input{
+  .hbe-input {
     min-width: 80% !important;
   }
 
-  .hbe-input-xray{
+  .hbe-input-xray {
     padding-bottom: 3em !important;
   }
 
-  .hbe-input-label-xray{
+  .hbe-input-label-xray {
     top: 0 !important;
   }
 
@@ -9799,12 +9838,13 @@ hr:before {
     top: 1em !important;
   }
 
-  .hbe-input-label-content{
+  .hbe-input-label-content {
     padding: 2em 0 !important;
   }
 
   /* 手机端不显示星星 */
-  .page:has(.layout>#page>#article-container>.hexo-douban-tabs) blockquote{
+  .page:has(.layout > #page > #article-container > .hexo-douban-tabs)
+    blockquote {
     display: none;
   }
 
