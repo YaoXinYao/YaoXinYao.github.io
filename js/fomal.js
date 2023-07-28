@@ -3443,7 +3443,7 @@ if (localStorage.getItem("blogbg") != undefined) {
   setBg(localStorage.getItem("blogbg"));
 } else {
   document.getElementById("defineBg").innerText = `:root{
-    --default-bg: url(https://gd-hbimg.huaban.com/e2d76e66c16641549fcf2396a518d6c1bd4fbdda19c16f-0KOGfL);
+    --default-bg: url(/assets/images/indexImg1.jpg);
     --darkmode-bg:url(/assets/images/indexImg2.png);
     --mobileday-bg: url(https://wangjinglun.oss-cn-beijing.aliyuncs.com/images/Darling/172.jpg);
     --mobilenight-bg: url(https://wangjinglun.oss-cn-beijing.aliyuncs.com/images/Darling/62.jpg);
