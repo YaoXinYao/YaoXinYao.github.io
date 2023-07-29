@@ -3445,8 +3445,8 @@ if (localStorage.getItem("blogbg") != undefined) {
   document.getElementById("defineBg").innerText = `:root{
     --default-bg: url(/assets/images/indexImg2.png);
     --darkmode-bg:url(/assets/images/indexImg1.jpg);
-    --mobileday-bg: url(https://wangjinglun.oss-cn-beijing.aliyuncs.com/images/Darling/172.jpg);
-    --mobilenight-bg: url(https://wangjinglun.oss-cn-beijing.aliyuncs.com/images/Darling/62.jpg);
+    --mobileday-bg: url(/assets/phoneDay.webp);
+    --mobilenight-bg: url(/assets/phoneNight.webp);
   }`;
 }
 // 切换背景主函数
@@ -3680,7 +3680,7 @@ function createWinbox() {
 
 <details class="folding-tag" cyan><summary> 查看明日方舟背景 </summary>
               <div class='content'>
-              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(/assets/images/Arknights/2.webp)" class="imgbox" onclick="changeBg('url(/assets/images/Arknights/2.webp)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(/assets/images/Arknights/3.webp)" class="imgbox" onclick="changeBg('url(/assets/images/Arknights/3.webp)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(/assets/images/Arknights/4.webp)" class="imgbox" onclick="changeBg('url(/assets/images/Arknights/4.webp)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(/assets/images/Arknights/5.webp)" class="imgbox" onclick="changeBg('url(/assets/images/Arknights/5.webp)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(/assets/images/Arknights/6.webp)" class="imgbox" onclick="changeBg('url(/assets/images/Arknights/6.jpg)')"></a></div>
+              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(/assets/images/Arknights/1.webp)" class="imgbox" onclick="changeBg('url(/assets/images/Arknights/1.webp)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(/assets/images/Arknights/2.webp)" class="imgbox" onclick="changeBg('url(/assets/images/Arknights/2.webp)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(/assets/images/Arknights/3.webp)" class="imgbox" onclick="changeBg('url(/assets/images/Arknights/3.webp)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(/assets/images/Arknights/4.webp)" class="imgbox" onclick="changeBg('url(/assets/images/Arknights/4.webp)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(/assets/images/Arknights/5.webp)" class="imgbox" onclick="changeBg('url(/assets/images/Arknights/5.webp)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(/assets/images/Arknights/6.jpg)" class="imgbox" onclick="changeBg('url(/assets/images/Arknights/6.jpg)')"></a></div>
               </div>
             </details>
 
