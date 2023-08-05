@@ -985,8 +985,8 @@ function createtime1() {
 
   var ascll = [
     `欢迎来到`,
-    `你好可爱の小家!`,
-    `山水一程，三生有幸✨`,
+    `Byte邮递员的小窝!`,
+    `手握玫瑰之人，无需神祗✨`,
     "小站已经苟活",
     dnum,
     "天啦!",
@@ -3686,7 +3686,7 @@ function createWinbox() {
 
 <h3>2. 宫崎骏</h3>
 
-<details class="folding-tag" cyan><summary> 查jpg背景 </summary>
+<details class="folding-tag" cyan><summary> 查宫崎骏背景 </summary>
               <div class='content'>
               <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(/assets/images/One_Piece/1.webp)" class="imgbox" onclick="changeBg('url(/assets/images/One_Piece/1.webp)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(/assets/images/One_Piece/2.webp)" class="imgbox" onclick="changeBg('url(/assets/images/One_Piece/2.webp)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(/assets/images/One_Piece/3.jpg)" class="imgbox" onclick="changeBg('url(/assets/images/One_Piece/3.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(/assets/images/One_Piece/4.webp)" class="imgbox" onclick="changeBg('url(/assets/images/One_Piece/4.webp)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(/assets/images/One_Piece/5.webp)" class="imgbox" onclick="changeBg('url(/assets/images/One_Piece/5.webp)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(/assets/images/One_Piece/6.webp)" class="imgbox" onclick="changeBg('url(/assets/images/One_Piece/6.webp)')"></a></div>
               </div>
